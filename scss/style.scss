@@ -60,13 +60,17 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom: 30px;
+  justify-content: space-around;
 }
 .img {
-  display: flex;
-  flex: 5%;
-  padding: 5px;
+  position: relative;
   opacity: 0.7;
+  display: flex;
+  padding: 15px 0px 15px 0px;
+}
+.card {
+  width: 159px;
+  height: 238px;
 }
 .img:hover {
   cursor: pointer;
@@ -79,10 +83,7 @@ main {
 .img:not(:hover) {
   transition: all 0.2s;
 }
-.img > img {
-  width: 100%;
-  height: auto;
-}
+/*footer*/
 .content {
   flex: 1 1 auto;
   margin-left: 30px;

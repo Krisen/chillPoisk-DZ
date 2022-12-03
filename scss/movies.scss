@@ -68,12 +68,17 @@ main {
   width: 159px;
   height: 238px;
   color: rgba($color: #fff, $alpha: 0);
-  & > span {
+  & > a {
     z-index: 1002;
     display: block;
     font-weight: bold;
     padding: 60px 0;
     text-align: center;
+    opacity: 0;
+    height: 100%;
+  }
+  & > a:hover {
+    opacity: 1;
   }
   &:hover {
     color: rgba($color: #fff, $alpha: 1);

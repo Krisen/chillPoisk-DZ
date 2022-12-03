@@ -185,12 +185,17 @@ main {
   height: 238px;
   color: rgba(255, 255, 255, 0);
 }
-.movies__card-front > span {
+.movies__card-front > a {
   z-index: 1002;
   display: block;
   font-weight: bold;
   padding: 60px 0;
   text-align: center;
+  opacity: 0;
+  height: 100%;
+}
+.movies__card-front > a:hover {
+  opacity: 1;
 }
 .movies__card-front:hover {
   color: white;

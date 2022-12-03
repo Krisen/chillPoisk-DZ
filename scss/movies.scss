@@ -55,9 +55,35 @@ main {
   justify-content: space-around;
 }
 .movies__card {
-  opacity: 0.9;
+  z-index: 1000;
+  position: relative;
+  opacity: 1;
   display: flex;
   padding: 15px 5px 15px 5px;
+}
+.movies__card-front {
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 159px;
+  height: 238px;
+  color: rgba($color: #fff, $alpha: 0);
+  & > span {
+    z-index: 1002;
+    display: block;
+    font-weight: bold;
+    padding: 60px 0;
+    text-align: center;
+  }
+  &:hover {
+    color: rgba($color: #fff, $alpha: 1);
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &:not(:hover) {
+    transition: all 0.2s;
+  }
 }
 .movies__card:hover {
   cursor: pointer;
@@ -69,6 +95,9 @@ main {
 }
 .movies__card:not(:hover) {
   transition: all 0.2s;
+  .card__info {
+    transition: all 0.2s;
+  }
 }
 .card {
   width: 159px;

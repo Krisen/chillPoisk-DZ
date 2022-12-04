@@ -173,17 +173,19 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+}
+@media screen and (min-width: 200px) and (max-width: 1024px) {
+  .collection__cards {
+    margin: 0 auto;
+  }
 }
 
 .img {
   position: relative;
-  opacity: 0.7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px 0px 15px 0px;
+  padding: 15px 4px 15px 4px;
 }
 
 .card {
@@ -196,13 +198,47 @@ main {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  opacity: 1;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
 .img:not(:hover) {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.movies__card-front {
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 159px;
+  height: 238px;
+  color: rgba(255, 255, 255, 0);
+}
+.movies__card-front > a {
+  z-index: 1002;
+  display: block;
+  font-weight: bold;
+  padding: 60px 0;
+  text-align: center;
+  line-height: 100px;
+  opacity: 0;
+  height: 100%;
+}
+.movies__card-front > a:hover {
+  opacity: 1;
+}
+.movies__card-front:hover {
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.movies__card-front:not(:hover) {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
